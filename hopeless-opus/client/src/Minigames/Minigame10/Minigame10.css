@@ -1,0 +1,120 @@
+.App {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 125vh;
+}
+
+.game-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Added shadow for depth */
+  overflow: hidden; /* Prevents overflow */
+}
+
+.question-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px; /* Increased font size for better visibility */
+  padding: 30px; /* Increased padding */
+  text-align: center; /* Centered text */
+  position: relative; /* For potential future animations */
+}
+
+.grid-container {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tile-row {
+  display: flex;
+  margin-bottom: 15px; /* Increased spacing between rows */
+}
+
+.tile {
+  width: 100px;
+  height: 100px;
+  background-color: #e17055;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 0.2s ease, background-color 0.3s ease; /* Adjusted transition timing */
+  margin: 0 5px;
+  font-weight: bold; /* Added bold text */
+  font-size: 16px; /* Increased font size for better visibility */
+}
+
+.tile:hover {
+  background-color: #d63031;
+  transform: scale(1.05);
+}
+
+.tile.active:hover {
+  background-color: #d63031;
+  transform: scale(1.1); /* Increased scaling effect on hover */
+}
+
+.tile:active {
+  background-color: #d63031;
+}
+
+.tile.correct {
+  background-color: #2ecc71;
+  animation: fadeIn 0.5s; /* Added animation */
+}
+
+.tile.incorrect {
+  background-color: #e74c3c;
+  animation: shake 0.3s; /* Added shake effect for incorrect answers */
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-5px);
+  }
+  40% {
+    transform: translateX(5px);
+  }
+  60% {
+    transform: translateX(-5px);
+  }
+  80% {
+    transform: translateX(5px);
+  }
+}
+
+h2 {
+  color: white;
+  font-size: 22px; /* Increased font size for better visibility */
+  margin: 0; /* Remove default margin */
+}
+.score-container {
+  margin-top: 20px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}

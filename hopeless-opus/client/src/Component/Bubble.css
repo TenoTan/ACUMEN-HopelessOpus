@@ -1,0 +1,31 @@
+ 
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+  @font-face {
+    font-family: 'ProtestGuerrilla';
+    src: url('../Resources/ProtestGuerrilla-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  .no-select::selection {
+    background: transparent;
+    color: inherit;
+  }
+  .no-select {
+    user-select: none; /* Disable selection in most modern browsers */
+    -webkit-user-select: none; /* Disable selection for Safari */
+    -moz-user-select: none; /* Disable selection for Firefox */
+    -ms-user-select: none; /* Disable selection for Internet Explorer */
+  }
+
+  @keyframes fade-in-out {
+    0%, 100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
